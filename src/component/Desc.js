@@ -4,13 +4,13 @@ import ReactLoading from 'react-loading';
 
 import '../style/desc.css'
 function Desc() {
-
+   const loaded=useSelector(data=>data.loaded)
    const list=useSelector(data=>data.selection)
   return (<>
     {list?.id ?( 
    <div className='discription' data-aos="zoom-in-down">
    <div className='Img-desc'><img src={list.image} alt='desc-data'/></div>
-  
+   
     <div className='card-desc'>
     <div className='name'>མཚན། : {list.name}་</div>
    <div className='nameEng' style={{fontFamily:'monospace'}}>Name : {list.nameEng}་</div>
@@ -24,9 +24,9 @@ function Desc() {
     </div>
    </div>):(
        <center>
-           
-     
-         <ReactLoading type="spin" height={'20px'} width={'20px'} />
+       {loaded ?(<ReactLoading type="spin" height={'20px'} width={'20px'} />):
+          null
+       }  
          </center>)
     }
    </>

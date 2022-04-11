@@ -3,13 +3,11 @@
     margin-top: 5vh;
     display: grid;
     gap:10px;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     align-items: center;
     justify-items: center;
+    margin-inline: 100px;
     
-}
-.card{
-    transition: box-shadow ease-in 0.2s;
 }
 .card:hover{
     box-shadow: 1px 1px 10px black;
@@ -19,15 +17,11 @@
     height: 80%;
     transition: all 0.3s linear;
 }
-.card>img:hover{
+.card:hover img{
     transform: scale(0.9);
 }
 .card-text{
     text-align: center;
     font-weight: bold;
-}
-a *{
-    text-decoration: none;
-    color:black;
-    
+    font-size: 1.3rem;
 }

@@ -1,17 +1,26 @@
 
 import './App.css';
-import List from './component/ListOfPan'
+import {connect} from 'react-redux'
+import Index from './component'
+import {changeSelection} from "./helper/myAction.js"
 function App() {
   return (
     <div className="App">
-   
-    <div className="heading">
-        <h1>པན་གྲུབ་བཅུ་བདུན།</h1>
-    </div>
-     <hr/>
-   <List/>
+     <Index/>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps= state=>{
+  return {
+    list:state.list
+  }
+}
+
+const mapDispatchToProps= dispatch=>{
+  return {
+    changeSelection: ()=>dispatch(changeSelection())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

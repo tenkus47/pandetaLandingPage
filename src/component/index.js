@@ -2,7 +2,9 @@ import React from 'react'
 import List from './ListOfPan'
 import Heading from './Heading'
 import Desc from './Desc'
-function index() {
+function Index() {
+
+
   return (
     <div >
         <div className='absoluteBackground'></div>
@@ -14,4 +16,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

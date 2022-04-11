@@ -1,9 +1,15 @@
 :root{
-  --textColor:"white";
-  --backgroundColor:"red";
+  --textColor:white;
+  --backgroundColor:#06113C;
 }
 .App {
   text-align: center;
-  color:var(--backgroundColor);
+
+}
+body{  
+
+  background-color:var(--backgroundColor);
+  color:var(--textColor);
+  letter-spacing: 3px;
 
 }

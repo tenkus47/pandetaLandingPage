@@ -13,11 +13,11 @@ function Desc() {
    <div className='nameEng' style={{fontFamily:'monospace'}}>Name : {list.nameEng}་</div>
    {list.desc}</div>
     <div className='relLinks'>
-        <button>Downloads</button>
-        <button>Parkhang</button>
-        <button>Lopenling</button>
-        <button>BDRC</button>
-        <button>Wikipedia</button>
+        <button  className="button-54" role="button">Downloads</button>
+        <button  className="button-54" role="button">Parkhang</button>
+        <button  className="button-54" role="button">Lopenling</button>
+        <button  className="button-54" role="button">BDRC</button>
+        <button  className="button-54" role="button">Wikipedia</button>
     </div>
    </div>):(null)
     }

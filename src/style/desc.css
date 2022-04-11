@@ -37,12 +37,21 @@
 
 @media only screen and (max-width: 950px) {
     .discription {
-        display:flex;
-        flex-direction: column;
-        font-size: 1.3rem;
+      grid-template-areas: "img img img"
+      "desc desc desc"
+      "link link link";
+      justify-items: center;
+        font-size: 0.5rem;
         margin:0;
         padding:10px 0;
     }
+    .card-desc{
+      position: relative;
+      top:20px;
+      grid-area:desc;
+      margin-bottom: 5vh;
+  }
+    
   }
 
   .button-54 {

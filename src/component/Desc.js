@@ -17,7 +17,7 @@ function Desc() {
         <button  className="button-54" role="button">Parkhang</button>
         <button  className="button-54" role="button">Lopenling</button>
         <button  className="button-54" role="button">BDRC</button>
-        <button  className="button-54" role="button">Wikipedia</button>
+        <button className="button-54" role="button">Wikipedia</button>
     </div>
    </div>):(null)
     }

@@ -26,3 +26,10 @@ body{
   filter: blur(8px);
   -webkit-filter: blur(8px);
 }
+footer{
+  position:fixed;
+  bottom:0;
+  background-color: black;
+  color:white;
+  width: 100vw;
+}

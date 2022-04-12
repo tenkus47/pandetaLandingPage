@@ -11,6 +11,8 @@
 }
 .card{
     background-color: rgba(43,43,12, 0.8);
+    max-height: 100%;
+    border-radius: 6px;
  
 }
 .card:hover{

@@ -2,7 +2,7 @@ import {data} from '../helper/pandetaInfo'
 
 const initialState={
     List:data,
-    selectionId:null,
+    selection:data[0],
     loaded:false
 };
 export const reducer = (state = initialState, action) => {
@@ -20,7 +20,7 @@ export const reducer = (state = initialState, action) => {
           case "changeLoaded":
             return {
                 ...state,
-                loaded:!state.loaded
+                loaded:action.data
           }
           default:
               return {

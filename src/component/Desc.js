@@ -1,20 +1,26 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React,{useEffect} from 'react'
+import { useSelector,useDispatch } from 'react-redux'
 import ReactLoading from 'react-loading';
 
 import '../style/desc.css'
 function Desc() {
-   const loaded=useSelector(data=>data.loaded)
+   const loading=useSelector(data=>data.loaded)
    const list=useSelector(data=>data.selection)
-  return (<>
-    {list?.id ?( 
-   <div className='discription' data-aos="zoom-in-down">
-   <div className='Img-desc'><img src={list.image} alt='desc-data'/></div>
+   var dispatch=useDispatch();
+useEffect(()=>{
+dispatch({type:'changeLoaded',data:true});
+setTimeout(()=>{
+  dispatch({type:'changeLoaded',data:false});
+},500)
+},[list])
+  return ( <div className='discription' data-aos="zoom-in-down">
+    {!loading ?(<>
+   <div className='Img-desc'><img src={list?.image} alt='desc-data'/></div>
    
     <div className='card-desc'>
-    <div className='name'>མཚན། : {list.name}་</div>
-   <div className='nameEng' style={{fontFamily:'monospace'}}>Name : {list.nameEng}་</div>
-   {list.desc}</div>
+    <div className='name'>མཚན། : {list?.name}་</div>
+   <div className='nameEng' style={{fontFamily:'monospace'}}>Name : {list?.nameEng}་</div>
+   {list?.desc}</div>
     <div className='relLinks'>
         <button  className="button-54" >Downloads</button>
         <button  className="button-54" >Parkhang</button>
@@ -22,16 +28,15 @@ function Desc() {
         <button  className="button-54" >BDRC</button>
         <button className="button-54" >Wikipedia</button>
     </div>
-   </div>):(
-       <center>
-       {loaded ?(<ReactLoading type="spin" height={'20px'} width={'20px'} />):
-          null
-       }  
-         </center>)
-    }
-   </>
+    </>
 
+   ):(<div style={{display:'flex',gridColumn:'2/3',justifyContent:'center'}}>
+     <ReactLoading type="spin" color="black" />
+       </div> )
+    }
+  </div>
   )
+
 }
 
 export default Desc

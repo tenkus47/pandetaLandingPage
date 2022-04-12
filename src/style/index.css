@@ -7,7 +7,7 @@
     align-items: center;
     justify-items: center;
     margin-inline: 100px;
-    
+    margin-bottom:40px;
 }
 .card{
     background-color: rgba(43,43,12, 0.8);
